@@ -1,0 +1,84 @@
+#1.2
+  25*4+9/3
+
+#1.3
+  # to compute the volume of a cube
+  3 * 3 * 3
+
+#1.4
+  print('Anvita')
+  print(19)
+  print('19')
+
+#1.5
+  name <- 'Anvita'
+  age <- 19
+  name = 'Anvita'
+  age = 19
+
+#1.6
+  phone <- c(123, 456, 7890)
+  typeof(phone)
+  length(phone)
+  phone[1]
+
+#1.7
+  message <- 'I change based on a condition.'
+  if (TRUE) {
+    message <- 'I execute this when true!'
+  } else {
+    message <- 'I execute this when false!'
+  }
+  
+  print(message)
+
+#1.8
+  56 >= 129 #FALSE
+  56 != 129 #TRUE
+
+#1.9
+  message <- 'Should I pack an umbrella?'
+  weather <- 'cloudy'
+  high_chance_of_rain <- TRUE
+  
+  if (weather == 'cloudy' & high_chance_of_rain) {
+    message <- "Pack umbrella!"
+  } else {
+    message <- "No need for umbrella!"
+  }
+  
+  print(message)
+
+#1.10
+  data <- c(120,22,22,31,15,120)
+  sort(data)
+  print(data)
+  unique_vals <- unique(data) 
+  print(unique_vals)
+  
+  solution <- sqrt(49)
+  print(solution)
+  
+  round_down <- floor(3.14)
+  round_up <- ceiling(3.14)
+  print(round_down)
+  print(round_up)
+
+#1.11
+
+  # load libraries
+  library(dplyr)
+  library(readr)
+  
+  # load data frame
+  artists <- read_csv('artists.csv')
+  
+  # inspect data frame
+  artists
+  head(artists)
+  summary(artists)
+  
+  artists %>%
+    select(-country,-year_founded,-albums) %>%
+    filter(spotify_monthly_listeners > 20000000, genre != 'Hip Hop') %>%
+    arrange(desc(youtube_subscribers))
